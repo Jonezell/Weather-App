@@ -1,0 +1,179 @@
+body,
+html
+{
+    margin: 0;
+    padding: 0;
+    background: #000 !important;
+	
+}
+.page-container
+{
+    position: fixed;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    background: #131415;
+    height: 100%;
+}
+
+
+
+
+
+
+.location
+{
+    position: fixed;
+    top:30px;
+    right:0;
+    left:0;
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ddd;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 13px;
+	text-shadow: none;
+}
+
+
+
+
+
+
+
+.today-container
+{
+    text-align: center;
+    height: 100%;
+}
+.today-container:before
+{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.today-temp
+{   
+    display: inline-block;
+    font-size: 200px;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    line-height: 0px;
+    color: #fff;
+    position: relative;
+	text-shadow: none;
+}
+.today-temp::after
+{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #999;
+    right:-10px;
+    top:-82px;
+    border-radius: 50%;
+    content: " ";
+}
+
+
+
+
+
+
+.forecast-container
+{
+    width: 100%;
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    border-top: 1px solid #000;
+    padding-top: 22px;
+    padding-bottom: 20px;
+}
+.forecast-container::after
+{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.forecast-day-container
+{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+	text-shadow: none;
+}
+.forecast-day-container:nth-child(n+4)
+{
+    display: none;
+}
+.forecast-day
+{
+    font-weight: 700;
+    color: #fff;
+    font-size: 17px;
+}
+.forecast-temp
+{
+    font-weight: 400;
+    color: #555;
+    font-size: 16px;
+}
+.forecast-temp-low,
+.forecast-temp-high
+{
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+/* ---------- iPAD ------------ */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  
+{ 
+    .forecast-day-container
+    {
+        width:20%;   
+    }
+    .forecast-day-container:nth-child(n+4)
+    {
+        display: block;
+    }
+    .today-temp
+    {
+        font-size: 400px;
+    }
+    .today-temp:after
+    {
+        top:-163px;
+    }
+
+
+}
+
+
+/* ---------- iPHONE - LANDSCAPE ------------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)
+{ 
+    .forecast-container,
+    .location
+    {
+        display: none;
+    }
+    
+}
+
+
+
+
+
+

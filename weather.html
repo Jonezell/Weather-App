@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Weather">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+        <link href="images/startup.png" rel="apple-touch-startup-image">
+        <!-- Startup images 
+        <link href="/static/images/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="/static/images/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        -->
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
+        
+        <script src="get-weather.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
+        <link rel="stylesheet" href="default.css" />
+        
+        <script type="text/javascript">
+           function blockMove() {
+              event.preventDefault() ;
+            }
+            $().ready(function(){
+                jon.weather.loadWeather();
+            });
+        </script>
+    </head>
+   
+    
+    <body ontouchmove="blockMove()">
+        <div class="page-container">
+            <div class="location">
+                <span id="data-location-city"></span>, <span id="data-location-region"></span>
+            </div>
+            <div class="today-container">
+                <div class="today-temp"><span id="data-temperature"></span></div>
+            </div>
+            <div class="forecast-container"></div>
+        </div>
+    </body>
+    
+
+</html>
